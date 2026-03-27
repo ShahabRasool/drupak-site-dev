@@ -1,0 +1,27 @@
+uuid: 50ea8f0c-f5e6-4d5f-a276-4dad24135d91
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - drupak
+_core:
+  default_config_hash: lEYaFThodfPrb2KD_litgzX8AzR-Ac2NRq9Z7CBcqe8
+id: drupak_main_menu
+theme: drupak
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

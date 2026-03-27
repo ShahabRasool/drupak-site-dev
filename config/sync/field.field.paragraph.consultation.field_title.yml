@@ -1,0 +1,19 @@
+uuid: a27a21af-fb7d-474b-9d2e-fc163c544a0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.consultation
+id: paragraph.consultation.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: consultation
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

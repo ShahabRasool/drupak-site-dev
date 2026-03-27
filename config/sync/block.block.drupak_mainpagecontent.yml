@@ -1,0 +1,22 @@
+uuid: 7798abb5-a6d8-4976-8a8e-ef2c2084155b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupak
+_core:
+  default_config_hash: X0DIKYBNE1SzJkVASt-WWz7K-3QcQ2VBJlKWfXFB2Io
+id: drupak_mainpagecontent
+theme: drupak
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

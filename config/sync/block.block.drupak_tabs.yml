@@ -1,0 +1,22 @@
+uuid: 524af77d-615f-4759-8d80-b977760bc08c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - drupak
+_core:
+  default_config_hash: xyHzeGQ1TLT9D4mSbgnj2vOJoZI224AVN4K7QYMhn98
+id: drupak_tabs
+theme: drupak
+region: highlighted
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

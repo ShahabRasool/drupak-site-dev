@@ -1,0 +1,25 @@
+uuid: 70abe3f7-b00e-4060-a371-92701aa62324
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupak
+_core:
+  default_config_hash: qyYDXNyV5gpKwP5sTtlxTUeKH9BI_T_kHCGONe37Z90
+id: drupak_sitebranding
+theme: drupak
+region: branding
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: ''
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

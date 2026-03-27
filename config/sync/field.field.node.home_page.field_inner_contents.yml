@@ -1,0 +1,31 @@
+uuid: 2f3113eb-7454-4f33-9afd-80d5d4beff4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_inner_contents
+    - node.type.home_page
+    - paragraphs.paragraphs_type.consultation
+  module:
+    - entity_reference_revisions
+id: node.home_page.field_inner_contents
+field_name: field_inner_contents
+entity_type: node
+bundle: home_page
+label: 'Inner Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      consultation: consultation
+    negate: 0
+    target_bundles_drag_drop:
+      consultation:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions
