@@ -1,0 +1,20 @@
+uuid: f47dcb81-eef0-4927-a304-19fdfc19b138
+langcode: en
+status: true
+dependencies:
+  theme:
+    - drupak
+_core:
+  default_config_hash: _T3YyTBlaPHScJ9xIl-3t454sOj1MlzKhtHSWgCX3R4
+id: drupak_primaryadminactions
+theme: drupak
+region: highlighted
+weight: 0
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

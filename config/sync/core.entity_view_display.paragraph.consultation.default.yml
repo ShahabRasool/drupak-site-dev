@@ -1,0 +1,79 @@
+uuid: d28bb561-aa7e-40e5-a946-556ba6cd45b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.consultation.field_description
+    - field.field.paragraph.consultation.field_media_image
+    - field.field.paragraph.consultation.field_title
+    - paragraphs.paragraphs_type.consultation
+  module:
+    - layout_builder
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - drupak
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:drupak:consultation'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'drupak:consultation'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              image:
+                source_id: entity_reference
+                source:
+                  derivable_context: 'entity_reference:paragraph:consultation:field_media_image:media:image'
+                  'entity_reference:paragraph:consultation:field_media_image:media:image':
+                    value:
+                      source_id: entity_reference
+                      source:
+                        derivable_context: 'entity_reference:media:image:thumbnail:file:file'
+                        'entity_reference:media:image:thumbnail:file:file':
+                          value:
+                            source_id: entity_field
+                            source:
+                              derivable_context: 'field:file:file:uri'
+                              'field:file:file:uri':
+                                value:
+                                  source_id: 'field_property:file:uri:url'
+              title:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:consultation:field_title'
+                  'field:paragraph:consultation:field_title':
+                    value:
+                      source_id: 'field_property:paragraph:field_title:value'
+              description:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:consultation:field_description'
+                  'field:paragraph:consultation:field_description':
+                    value:
+                      source_id: 'field_property:paragraph:field_description:value'
+            slots: {  }
+            third_party_settings: ''
+            node_id: ''
+        components: {  }
+        third_party_settings: {  }
+id: paragraph.consultation.default
+targetEntityType: paragraph
+bundle: consultation
+mode: default
+content: {  }
+hidden:
+  field_description: true
+  field_media_image: true
+  field_title: true

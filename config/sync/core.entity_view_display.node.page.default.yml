@@ -1,0 +1,19 @@
+uuid: c80098f5-bdea-4272-8d70-28b8ebf729a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+  module:
+    - user
+_core:
+  default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  links:
+    weight: 101
+    region: content
+hidden: {  }

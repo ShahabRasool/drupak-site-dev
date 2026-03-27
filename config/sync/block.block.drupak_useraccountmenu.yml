@@ -1,0 +1,27 @@
+uuid: c7e11896-9502-4b3e-8d60-10a3c81629b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - drupak
+_core:
+  default_config_hash: 1yG0WOzuN9TE7TWkGquH-8aRhGweqDG80kc8AeJLo0c
+id: drupak_useraccountmenu
+theme: drupak
+region: top_right_actions
+weight: 0
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

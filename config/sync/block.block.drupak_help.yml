@@ -1,0 +1,22 @@
+uuid: d8e98c78-d9e9-4b38-9092-6b0702abf54e
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - drupak
+_core:
+  default_config_hash: DrpgRm8MVci1XbZOtZ6DCcpCQSeKbbdrto9CAFp8Ap4
+id: drupak_help
+theme: drupak
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }
