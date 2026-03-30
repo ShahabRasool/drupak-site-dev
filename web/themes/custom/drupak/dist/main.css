@@ -359,6 +359,12 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-2\.5 {
+    gap: calc(var(--spacing) * 2.5);
+  }
+  .gap-3\.75 {
+    gap: calc(var(--spacing) * 3.75);
+  }
   .gap-5 {
     gap: var(--spacing-5);
   }
@@ -408,6 +414,12 @@
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
+  .border-tertiary {
+    border-color: var(--color-tertiary);
+  }
+  .border-transparent {
+    border-color: transparent;
+  }
   .bg-body-bg {
     background-color: var(--color-body-bg);
   }
@@ -419,6 +431,9 @@
   }
   .bg-secondary {
     background-color: var(--color-secondary);
+  }
+  .bg-transparent {
+    background-color: transparent;
   }
   .bg-cover {
     background-size: cover;
@@ -452,6 +467,9 @@
   }
   .py-3 {
     padding-block: var(--spacing-3);
+  }
+  .py-4 {
+    padding-block: var(--spacing-4);
   }
   .py-20 {
     padding-block: var(--spacing-20);
@@ -543,6 +561,11 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
@@ -565,6 +588,14 @@
   }
   .\[webform\:title\] {
     webform: title;
+  }
+  .group-hover\:translate-x-1 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-translate-x: var(--spacing-1);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
   }
   .after\:absolute {
     &::after {
@@ -602,10 +633,38 @@
       background-color: var(--color-tertiary);
     }
   }
+  .hover\:border-tertiary {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-tertiary);
+      }
+    }
+  }
+  .hover\:border-transparent {
+    &:hover {
+      @media (hover: hover) {
+        border-color: transparent;
+      }
+    }
+  }
+  .hover\:bg-primary {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-primary);
+      }
+    }
+  }
   .hover\:bg-secondary {
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-secondary);
+      }
+    }
+  }
+  .hover\:bg-transparent {
+    &:hover {
+      @media (hover: hover) {
+        background-color: transparent;
       }
     }
   }
@@ -650,6 +709,11 @@
   .md\:max-w-lg {
     @media (width >= 48rem) {
       max-width: var(--container-lg);
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
     }
   }
   .md\:\!opacity-90 {
@@ -882,6 +946,21 @@ header .search-icon form {
   syntax: "*";
   inherits: false;
 }
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
 @property --tw-content {
   syntax: "*";
   initial-value: "";
@@ -926,6 +1005,9 @@ header .search-icon form {
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
       --tw-duration: initial;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-content: "";
     }
   }
