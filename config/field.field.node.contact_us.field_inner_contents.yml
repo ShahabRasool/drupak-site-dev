@@ -1,0 +1,34 @@
+uuid: 515d30e4-c1bc-455c-ade5-0124d6258b56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_inner_contents
+    - node.type.contact_us
+    - paragraphs.paragraphs_type.about_us
+  module:
+    - entity_reference_revisions
+id: node.contact_us.field_inner_contents
+field_name: field_inner_contents
+entity_type: node
+bundle: contact_us
+label: 'Inner Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      about_us: about_us
+    negate: 0
+    target_bundles_drag_drop:
+      about_us:
+        weight: 3
+        enabled: true
+      consultation:
+        weight: 2
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,36 @@
+<section
+	class="about-us bg-secondary  container-px flex flex-col xl:flex-row justify-between gap-25 lg:gap-18 items-center max-w-480 mx-auto">
+
+	<!-- IMAGE WRAPPER -->
+	<div
+		class="about-image relative w-full xl:w-[50%] py-[clamp(2.5rem,2vw+2rem,5rem)] bg-center bg-cover bg-no-repeat">
+
+		<!-- SVG BACKGROUND -->
+		<svg viewbox="0 0 578 607" class="absolute inset-0 z-0 w-full h-full pointer-events-none" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+			<path d="M0 0H126.438L424.469 303.5H302.547L0 0Z" fill="var(--color-primary)" fill-opacity="0.4"/>
+			<path d="M578 154.015H451.563L307.062 303.5H428.984L578 154.015Z" fill="var(--color-primary)" fill-opacity="0.4"/>
+			<path d="M401.891 104.187C401.891 131.706 379.652 154.015 352.219 154.015C324.786 154.015 302.547 131.706 302.547 104.187C302.547 76.6671 324.786 54.3582 352.219 54.3582C379.652 54.3582 401.891 76.6671 401.891 104.187Z" fill="var(--color-primary)" fill-opacity="0.4"/>
+			<path d="M578 607H451.562L153.531 303.5H275.453L578 607Z" fill="var(--color-primary)" fill-opacity="0.4"/>
+			<path d="M0 452.985H126.438L270.938 303.5H149.016L0 452.985Z" fill="var(--color-primary)" fill-opacity="0.4"/>
+			<path d="M176.109 502.813C176.109 475.294 198.348 452.985 225.781 452.985C253.214 452.985 275.453 475.294 275.453 502.813C275.453 530.333 253.214 552.642 225.781 552.642C198.348 552.642 176.109 530.333 176.109 502.813Z" fill="var(--color-primary)" fill-opacity="0.4"/>
+		</svg>
+
+		<!-- IMAGE -->
+		<img src="{{image}}" class="relative z-10 w-full h-full object-cover" alt="">
+
+	</div>
+
+	<!-- TEXT SIDE -->
+	<div class="about-description flex flex-col gap-12 w-full xl:w-[50%]">
+
+		<div class="content font-oxanium">
+			<h2 class="text-text/90 text-h2">{{title}}</h2>
+			<h3 class="text-para text-text/70">{{description}}</h3>
+		</div>
+
+		<!-- BUTTON -->
+          {# {{cta}} #}
+
+	</div>
+</section>

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_inner_contents
     - node.type.home_page
+    - paragraphs.paragraphs_type.about_us
     - paragraphs.paragraphs_type.consultation
   module:
     - entity_reference_revisions
@@ -23,8 +24,12 @@ settings:
   handler_settings:
     target_bundles:
       consultation: consultation
+      about_us: about_us
     negate: 0
     target_bundles_drag_drop:
+      about_us:
+        weight: 3
+        enabled: true
       consultation:
         weight: 2
         enabled: true
