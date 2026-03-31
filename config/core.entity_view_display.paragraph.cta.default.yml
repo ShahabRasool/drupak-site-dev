@@ -1,0 +1,73 @@
+uuid: 03557a15-102b-4a0b-8115-73818fc4edbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta.field_button_cta
+    - field.field.paragraph.cta.field_variants
+    - paragraphs.paragraphs_type.cta
+  module:
+    - layout_builder
+    - options
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - drupak
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:drupak:cta'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'drupak:cta'
+            variant_id:
+              source_id: entity_field
+              source:
+                derivable_context: 'field:paragraph:cta:field_variants'
+                'field:paragraph:cta:field_variants':
+                  value:
+                    source_id: 'field_property:paragraph:field_variants:value'
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              title:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:cta:field_button_cta'
+                  'field:paragraph:cta:field_button_cta':
+                    value:
+                      source_id: 'field_property:paragraph:field_button_cta:title'
+              link:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:cta:field_button_cta'
+                  'field:paragraph:cta:field_button_cta':
+                    value:
+                      source_id: 'field_property:paragraph:field_button_cta:uri'
+            slots: {  }
+            third_party_settings: ''
+            node_id: ''
+        components: {  }
+        third_party_settings: {  }
+id: paragraph.cta.default
+targetEntityType: paragraph
+bundle: cta
+mode: default
+content:
+  field_variants:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: null
+hidden:
+  field_button_cta: true
