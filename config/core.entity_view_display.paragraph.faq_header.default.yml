@@ -1,0 +1,85 @@
+uuid: 92b00b95-9573-4062-98b8-4cfb7e011636
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_us.field_title
+    - field.field.paragraph.consultation.field_title
+    - field.field.paragraph.faq_header.field_content
+    - field.field.paragraph.faq_header.field_title
+    - field.field.paragraph.faq_items.field_title
+    - paragraphs.paragraphs_type.faq_header
+  module:
+    - layout_builder
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - drupak
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:drupak:faqheader'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'drupak:faqheader'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              title:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:faq_header:field_title'
+                  'field:paragraph:faq_header:field_title':
+                    value:
+                      source_id: 'field_property:paragraph:field_title:value'
+            slots: {  }
+            third_party_settings: ''
+            node_id: ''
+        components:
+          52c644d1-ad60-4334-b776-40d66a51a05e:
+            uuid: 52c644d1-ad60-4334-b776-40d66a51a05e
+            region: content
+            configuration:
+              id: 'field_block:paragraph:faq_header:field_content'
+              label: Content
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: ''
+                    referenced_entity: ''
+            weight: 0
+            additional:
+              ui_styles_wrapper: {  }
+              ui_styles_wrapper_extra: ''
+              ui_styles_title: {  }
+              ui_styles_title_extra: ''
+              ui_styles: {  }
+              ui_styles_extra: ''
+        third_party_settings: {  }
+id: paragraph.faq_header.default
+targetEntityType: paragraph
+bundle: faq_header
+mode: default
+content: {  }
+hidden:
+  field_content: true
+  field_title: true

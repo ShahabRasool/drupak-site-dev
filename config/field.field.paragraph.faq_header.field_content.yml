@@ -1,19 +1,18 @@
-uuid: 515d30e4-c1bc-455c-ade5-0124d6258b56
+uuid: 643accd3-6c56-4a75-ae5f-ae6e56af43c5
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_inner_contents
-    - node.type.contact_us
-    - paragraphs.paragraphs_type.about_us
+    - field.storage.paragraph.field_content
     - paragraphs.paragraphs_type.faq_header
+    - paragraphs.paragraphs_type.faq_items
   module:
     - entity_reference_revisions
-id: node.contact_us.field_inner_contents
-field_name: field_inner_contents
-entity_type: node
-bundle: contact_us
-label: 'Inner Content'
+id: paragraph.faq_header.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: faq_header
+label: Content
 description: ''
 required: false
 translatable: false
@@ -23,23 +22,22 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      about_us: about_us
-      faq_header: faq_header
+      faq_items: faq_items
     negate: 0
     target_bundles_drag_drop:
       about_us:
-        weight: 3
-        enabled: true
+        weight: 6
+        enabled: false
       consultation:
-        weight: 2
+        weight: 7
         enabled: false
       cta:
         weight: 8
         enabled: false
       faq_header:
         weight: 9
-        enabled: true
+        enabled: false
       faq_items:
         weight: 10
-        enabled: false
+        enabled: true
 field_type: entity_reference_revisions

@@ -1,0 +1,65 @@
+uuid: fbf39b8f-860f-47c7-9bdb-c8180bbb78ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_us.field_description
+    - field.field.paragraph.about_us.field_title
+    - field.field.paragraph.consultation.field_description
+    - field.field.paragraph.consultation.field_title
+    - field.field.paragraph.faq_header.field_title
+    - field.field.paragraph.faq_items.field_description
+    - field.field.paragraph.faq_items.field_title
+    - paragraphs.paragraphs_type.faq_items
+  module:
+    - layout_builder
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - drupak
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:drupak:faqitem'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'drupak:faqitem'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              title:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:faq_items:field_title'
+                  'field:paragraph:faq_items:field_title':
+                    value:
+                      source_id: 'field_property:paragraph:field_title:value'
+              description:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:faq_items:field_description'
+                  'field:paragraph:faq_items:field_description':
+                    value:
+                      source_id: 'field_property:paragraph:field_description:processed'
+            slots: {  }
+            third_party_settings: ''
+            node_id: ''
+        components: {  }
+        third_party_settings: {  }
+id: paragraph.faq_items.default
+targetEntityType: paragraph
+bundle: faq_items
+mode: default
+content: {  }
+hidden:
+  field_description: true
+  field_title: true
