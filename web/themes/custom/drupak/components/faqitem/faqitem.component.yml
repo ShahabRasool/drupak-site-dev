@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Faq Items
+status: stable
+description: "this for the faq items"
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: title
+      description: "title of the faq item. Plain text."
+    description:
+      type: string
+      title: description
+      description: "description of the faq item. Plain text."

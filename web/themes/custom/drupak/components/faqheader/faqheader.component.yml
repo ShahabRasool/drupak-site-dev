@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Faq header
+status: stable
+description: "this for the faq header"
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: title
+      description: "title of the faq header. Plain text."
+slots:
+  content:
+    type: string
+    title: content
+    description: "content of the faq header. Plain text."      

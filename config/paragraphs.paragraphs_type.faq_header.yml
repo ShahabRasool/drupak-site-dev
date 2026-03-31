@@ -1,0 +1,10 @@
+uuid: 23e7fd66-15a0-4e8c-9ccc-dd51e114487f
+langcode: en
+status: true
+dependencies: {  }
+id: faq_header
+label: 'Faq Header'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
