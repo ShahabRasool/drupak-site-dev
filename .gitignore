@@ -6,6 +6,12 @@ node_modules
 /.ddev
 /node_modules
 /.vscode
-/contrib
 /vendor
-/viewss
+/views
+/web/sites/*/*settings.php
+/web/sites/*/*services.yml
+/web/sites/*/settings.php
+/web/sites/*/services.yml
+/web/sites/*/files
+/web/sites/*/private
+/web/sites/default/files
