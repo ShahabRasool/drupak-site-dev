@@ -1,0 +1,133 @@
+uuid: 4f9896e8-f20e-4908-8753-c2c7060a44f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_us.field_description
+    - field.field.paragraph.about_us.field_title
+    - field.field.paragraph.consultation.field_description
+    - field.field.paragraph.consultation.field_title
+    - field.field.paragraph.faq_header.field_title
+    - field.field.paragraph.faq_items.field_description
+    - field.field.paragraph.faq_items.field_title
+    - field.field.paragraph.hero.field_description
+    - field.field.paragraph.hero.field_title
+    - field.field.paragraph.media_and_text.field_cta
+    - field.field.paragraph.media_and_text.field_description
+    - field.field.paragraph.media_and_text.field_flex_direction
+    - field.field.paragraph.media_and_text.field_media_image
+    - field.field.paragraph.media_and_text.field_title
+    - paragraphs.paragraphs_type.media_and_text
+  module:
+    - layout_builder
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - drupak
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:drupak:textandmedia'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'drupak:textandmedia'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              title:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:media_and_text:field_title'
+                  'field:paragraph:media_and_text:field_title':
+                    value:
+                      source_id: 'field_property:paragraph:field_title:value'
+              description:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:media_and_text:field_description'
+                  'field:paragraph:media_and_text:field_description':
+                    value:
+                      source_id: 'field_property:paragraph:field_description:processed'
+              imageurl:
+                source_id: entity_reference
+                source:
+                  derivable_context: 'entity_reference:paragraph:media_and_text:field_media_image:media:image'
+                  'entity_reference:paragraph:media_and_text:field_media_image:media:image':
+                    value:
+                      source_id: entity_field
+                      source:
+                        derivable_context: 'field:media:image:thumbnail'
+                        'field:media:image:thumbnail':
+                          value:
+                            source_id: 'entity:field_property:media:thumbnail:target_id'
+                            source:
+                              derivable_context: 'entity_reference:media:image:thumbnail:file:file'
+                              'entity_reference:media:image:thumbnail:file:file':
+                                value:
+                                  source_id: entity_field
+                                  source:
+                                    derivable_context: 'field:file:file:uri'
+                                    'field:file:file:uri':
+                                      value:
+                                        source_id: 'field_property:file:uri:url'
+              position:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:media_and_text:field_flex_direction'
+                  'field:paragraph:media_and_text:field_flex_direction':
+                    value:
+                      source_id: 'field_property:paragraph:field_flex_direction:value'
+            slots: {  }
+            third_party_settings: ''
+            node_id: ''
+        components:
+          e38fd6e9-af05-4968-9689-e1fb3c9c11ac:
+            uuid: e38fd6e9-af05-4968-9689-e1fb3c9c11ac
+            region: cta
+            configuration:
+              id: 'field_block:paragraph:media_and_text:field_cta'
+              label: CTA
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: ''
+                    referenced_entity: ''
+            weight: 0
+            additional:
+              ui_styles_wrapper: {  }
+              ui_styles_wrapper_extra: ''
+              ui_styles_title: {  }
+              ui_styles_title_extra: ''
+              ui_styles: {  }
+              ui_styles_extra: ''
+        third_party_settings: {  }
+id: paragraph.media_and_text.default
+targetEntityType: paragraph
+bundle: media_and_text
+mode: default
+content: {  }
+hidden:
+  field_cta: true
+  field_description: true
+  field_flex_direction: true
+  field_media_image: true
+  field_title: true
