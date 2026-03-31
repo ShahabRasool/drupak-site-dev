@@ -1,5 +1,5 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
-name: Consultation
+name: Consultation 
 status: stable
 description: "Consultation section About Us page"
 group: Drupak
