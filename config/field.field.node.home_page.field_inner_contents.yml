@@ -7,6 +7,7 @@ dependencies:
     - node.type.home_page
     - paragraphs.paragraphs_type.about_us
     - paragraphs.paragraphs_type.consultation
+    - paragraphs.paragraphs_type.hero
   module:
     - entity_reference_revisions
 id: node.home_page.field_inner_contents
@@ -23,14 +24,27 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
+      hero: hero
       consultation: consultation
       about_us: about_us
     negate: 0
     target_bundles_drag_drop:
       about_us:
-        weight: 3
+        weight: -11
         enabled: true
       consultation:
-        weight: 2
+        weight: -12
+        enabled: true
+      cta:
+        weight: -10
+        enabled: false
+      faq_header:
+        weight: -9
+        enabled: false
+      faq_items:
+        weight: -8
+        enabled: false
+      hero:
+        weight: -13
         enabled: true
 field_type: entity_reference_revisions
