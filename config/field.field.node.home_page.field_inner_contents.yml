@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.about_us
     - paragraphs.paragraphs_type.consultation
     - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.media_and_text
   module:
     - entity_reference_revisions
 id: node.home_page.field_inner_contents
@@ -27,6 +28,7 @@ settings:
       hero: hero
       consultation: consultation
       about_us: about_us
+      media_and_text: media_and_text
     negate: 0
     target_bundles_drag_drop:
       about_us:
@@ -46,5 +48,8 @@ settings:
         enabled: false
       hero:
         weight: -13
+        enabled: true
+      media_and_text:
+        weight: 14
         enabled: true
 field_type: entity_reference_revisions

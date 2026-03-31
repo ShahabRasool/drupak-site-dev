@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Text and Media
+status: stable
+description: "This is the text & media component"
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: title
+      description: "title of the text and media item. Plain text."
+    description:
+      type: string    
+      title: description
+      description: "description of the text and media item. Plain text."
+    imageurl:
+      type: string
+      title: imageurl
+      description: "the url of the text and media image. Plain text."
+    position:
+      type: string
+      title: position
+      description: "the position of the text and media image. Plain text."
+slots:
+  cta:
+    title: cta text and media
+    description: "cta text and media. Plain text."
