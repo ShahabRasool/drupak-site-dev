@@ -7,6 +7,7 @@ dependencies:
     - node.type.home_page
   module:
     - entity_reference_revisions
+    - nomarkup
     - user
 id: node.home_page.default
 targetEntityType: node
@@ -15,11 +16,15 @@ mode: default
 content:
   field_inner_contents:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
     weight: 101
     region: content
   links:

@@ -48,14 +48,14 @@
     --default-mono-font-family: var(--font-mono);
     --color-primary: #3b71ca;
     --color-secondary: #9fa6b2;
-    --color-tertiary: #f9fafb;
+    --color-tertiary: #14a44d;
     --color-body: #000000;
     --color-body-bg: #ffffff;
     --color-h1: #1f2937;
     --color-h2: #1f2937;
     --color-h3: #1f2937;
     --color-h4: #1f2937;
-    --color-success: #14a44d;
+    --color-success: #f9fafb;
     --color-warning: #e4a11b;
     --color-error: #dc4c64;
     --spacing-0: 0px;
@@ -473,6 +473,9 @@
   }
   .bg-body-bg {
     background-color: var(--color-body-bg);
+  }
+  .bg-error {
+    background-color: var(--color-error);
   }
   .bg-gray-50 {
     background-color: var(--color-gray-50);

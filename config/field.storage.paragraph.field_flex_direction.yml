@@ -1,0 +1,27 @@
+uuid: dd4a12e0-7a7a-45a7-adab-8665d3e708f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_flex_direction
+field_name: field_flex_direction
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: row
+      label: Row
+    -
+      value: row-reverse
+      label: 'Row Reverse'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: c4a1a492-4a50-4a23-9b6e-0189f216f31a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_flex_direction
+    - paragraphs.paragraphs_type.media_and_text
+  module:
+    - options
+id: paragraph.media_and_text.field_flex_direction
+field_name: field_flex_direction
+entity_type: paragraph
+bundle: media_and_text
+label: 'Flex Direction'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
