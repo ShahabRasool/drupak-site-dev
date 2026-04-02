@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Slider Card  Component
+status: stable
+description: "this for the slider card component"
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: title
+      description: "title of the faq item. Plain text."
+    description:
+      type: string
+      title: description
+      description: "description of the faq item. Plain text."
+    imageurl:
+      type: string
+      title: imageurl 
+      description: "the url of the hero background image. Plain text."
+slots:
+  cta:
+   title: cta hero
+   description: "cta hero. Plain text."

@@ -1,0 +1,24 @@
+uuid: bc8c1f9e-aa49-481e-9c54-1f25656ead06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.slider_card
+  module:
+    - text
+id: paragraph.slider_card.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: slider_card
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

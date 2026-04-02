@@ -1,0 +1,52 @@
+uuid: 7339bd09-5f18-452c-ac9e-6960ebdc893f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta
+    - paragraphs.paragraphs_type.cta
+    - paragraphs.paragraphs_type.slick_wrapper
+  module:
+    - entity_reference_revisions
+id: paragraph.slick_wrapper.field_cta
+field_name: field_cta
+entity_type: paragraph
+bundle: slick_wrapper
+label: CTA
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cta: cta
+    negate: 0
+    target_bundles_drag_drop:
+      about_us:
+        weight: 4
+        enabled: false
+      consultation:
+        weight: 5
+        enabled: false
+      cta:
+        weight: 6
+        enabled: true
+      faq_header:
+        weight: 12
+        enabled: false
+      faq_items:
+        weight: 13
+        enabled: false
+      hero:
+        weight: 14
+        enabled: false
+      media_and_text:
+        weight: 15
+        enabled: false
+      slick_wrapper:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions
