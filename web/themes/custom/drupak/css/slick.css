@@ -1,0 +1,156 @@
+/* ===============================
+   BASE
+================================= */
+.swiper {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+/* ===============================
+   CARD
+================================= */
+.slider-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.slider-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px rgba(0,0,0,0.15);
+}
+
+.card-img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* ===============================
+   PAGINATION (FIXED BELOW)
+================================= */
+.swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #cbd5f5;
+  opacity: 1;
+  margin: 0 4px !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  width: 22px;
+  border-radius: 10px;
+  background: #3b82f6;
+}
+
+/* ===============================
+   ARROWS
+================================= */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: none !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 44px;
+  height: 44px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next::before,
+.swiper-button-prev::before {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.swiper-button-next::before {
+  content: '›';
+}
+
+.swiper-button-prev::before {
+  content: '‹';
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #3b82f6;
+}
+
+.swiper-button-next:hover::before,
+.swiper-button-prev:hover::before {
+  color: #fff;
+}
+
+/* Position */
+.swiper-button-prev {
+  left: -20px;
+}
+
+.swiper-button-next {
+  right: -20px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 1024px) {
+  .swiper-button-prev { left: 0; }
+  .swiper-button-next { right: 0; }
+}
+
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 36px;
+    height: 36px;
+  }
+
+  .swiper-button-next::before,
+  .swiper-button-prev::before {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+/* ===============================
+   TEXT CLAMP
+================================= */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

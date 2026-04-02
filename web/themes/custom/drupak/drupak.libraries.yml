@@ -171,4 +171,38 @@ swiper-custom:
     - core/once
     - tailpine/swiper
 
+slick:
+  version: 1.x
+  css:
+    theme:
+      https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick/slick.css:
+        type: external
+        minified: true
+      https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick/slick-theme.css:
+        type: external
+        minified: true
+
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js:
+      type: external
+      minified: true
+  dependencies:
+    - core/jquery
+
+slick-custom:
+  js:
+    js/slick-init.js: {}
+  dependencies:
+    - drupak/slick
+    - core/drupal
+    - core/jquery
+    
+
+slick-css:
+  css:
+    theme:
+      css/slick.css: {}
+
+
+
 

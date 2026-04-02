@@ -8,6 +8,10 @@ libraries:
   - drupak/fixed-header
   - drupak/swiper
   - drupak/swiper-custom
+  - drupak/slick
+  - drupak/slick-custom
+  - drupak/slick-css
+  
 description: 'A modern Drupal  Theme powered by Tailwind CSS and Alpine.js, designed for flexibility, speed, and clean UI development.'
 core_version_requirement: ^11
 generator: 'tailpine_starterkit:1.0.0-rc8'
