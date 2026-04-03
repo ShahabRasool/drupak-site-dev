@@ -25,6 +25,7 @@
         "drupal/nomarkup": "^1.0",
         "drupal/pathauto": "^1.14",
         "drupal/tailpine": "^1.0@RC",
+        "drupal/token": "^1.17",
         "drush/drush": "^13.7"
     },
     "conflict": {
