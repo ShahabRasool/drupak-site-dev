@@ -25,7 +25,7 @@ mode: default
 content:
   field_content:
     type: paragraphs
-    weight: 1
+    weight: 3
     region: content
     settings:
       title: Paragraph
@@ -43,7 +43,7 @@ content:
     third_party_settings: {  }
   field_cta:
     type: paragraphs
-    weight: 3
+    weight: 2
     region: content
     settings:
       title: Paragraph
@@ -61,7 +61,7 @@ content:
     third_party_settings: {  }
   field_description:
     type: text_textarea
-    weight: 1
+    weight: 0
     region: content
     settings:
       rows: 5
