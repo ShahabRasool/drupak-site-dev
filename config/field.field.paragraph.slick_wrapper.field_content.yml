@@ -1,0 +1,55 @@
+uuid: 9d170ccc-4347-4d11-94fe-8e02c6a24235
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.slick_wrapper
+    - paragraphs.paragraphs_type.slider_card
+  module:
+    - entity_reference_revisions
+id: paragraph.slick_wrapper.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: slick_wrapper
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      slider_card: slider_card
+    negate: 0
+    target_bundles_drag_drop:
+      about_us:
+        weight: 6
+        enabled: false
+      consultation:
+        weight: 7
+        enabled: false
+      cta:
+        weight: 8
+        enabled: false
+      faq_header:
+        weight: 9
+        enabled: false
+      faq_items:
+        weight: 10
+        enabled: false
+      hero:
+        weight: 15
+        enabled: false
+      media_and_text:
+        weight: 16
+        enabled: false
+      slick_wrapper:
+        weight: 17
+        enabled: false
+      slider_card:
+        weight: 18
+        enabled: true
+field_type: entity_reference_revisions

@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.consultation
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.media_and_text
+    - paragraphs.paragraphs_type.slick_wrapper
   module:
     - entity_reference_revisions
 id: node.home_page.field_inner_contents
@@ -29,6 +30,7 @@ settings:
       consultation: consultation
       about_us: about_us
       media_and_text: media_and_text
+      slick_wrapper: slick_wrapper
     negate: 0
     target_bundles_drag_drop:
       about_us:
@@ -52,4 +54,10 @@ settings:
       media_and_text:
         weight: 14
         enabled: true
+      slick_wrapper:
+        weight: 17
+        enabled: true
+      slider_card:
+        weight: 18
+        enabled: false
 field_type: entity_reference_revisions

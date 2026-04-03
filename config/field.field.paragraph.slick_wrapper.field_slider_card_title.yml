@@ -1,0 +1,24 @@
+uuid: f57c86a8-cf46-494e-ba2b-9503f8e4f794
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slider_card_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.slick_wrapper
+  module:
+    - text
+id: paragraph.slick_wrapper.field_slider_card_title
+field_name: field_slider_card_title
+entity_type: paragraph
+bundle: slick_wrapper
+label: Slider-Card-Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long
