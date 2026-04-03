@@ -23,6 +23,7 @@
         "drupal/core-recommended": "^11.3",
         "drupal/media_thumbnail_url_formatter": "^4.0",
         "drupal/nomarkup": "^1.0",
+        "drupal/pathauto": "^1.14",
         "drupal/tailpine": "^1.0@RC",
         "drupal/token": "^1.17",
         "drush/drush": "^13.7"
