@@ -1,0 +1,135 @@
+uuid: f953f39c-ae02-421b-b84f-29fa9fc19f9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_us.field_description
+    - field.field.paragraph.consultation.field_description
+    - field.field.paragraph.faq_items.field_description
+    - field.field.paragraph.hero.field_description
+    - field.field.paragraph.media_and_text.field_description
+    - field.field.paragraph.slick_wrapper.field_content
+    - field.field.paragraph.slick_wrapper.field_cta
+    - field.field.paragraph.slick_wrapper.field_description
+    - field.field.paragraph.slick_wrapper.field_slider_card_title
+    - field.field.paragraph.slider_card.field_description
+    - paragraphs.paragraphs_type.slick_wrapper
+  module:
+    - layout_builder
+    - text
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - drupak
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:drupak:sliderwrapper'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'drupak:sliderwrapper'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              title:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:slick_wrapper:field_slider_card_title'
+                  'field:paragraph:slick_wrapper:field_slider_card_title':
+                    value:
+                      source_id: 'field_property:paragraph:field_slider_card_title:value'
+              description:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:slick_wrapper:field_description'
+                  'field:paragraph:slick_wrapper:field_description':
+                    value:
+                      source_id: 'field_property:paragraph:field_description:processed'
+            slots: {  }
+            third_party_settings: ''
+            node_id: ''
+        components:
+          7787ae6e-65e2-4938-9740-e2586bf2aecc:
+            uuid: 7787ae6e-65e2-4938-9740-e2586bf2aecc
+            region: cta
+            configuration:
+              id: 'field_block:paragraph:slick_wrapper:field_cta'
+              label: CTA
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: ''
+                    referenced_entity: ''
+            weight: 0
+            additional:
+              ui_styles_wrapper: {  }
+              ui_styles_wrapper_extra: ''
+              ui_styles_title: {  }
+              ui_styles_title_extra: ''
+              ui_styles: {  }
+              ui_styles_extra: ''
+          3a6bfe43-3fa9-4346-9992-a0cc1a4ddf00:
+            uuid: 3a6bfe43-3fa9-4346-9992-a0cc1a4ddf00
+            region: content
+            configuration:
+              id: 'field_block:paragraph:slick_wrapper:field_content'
+              label: Content
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: ''
+                    referenced_entity: ''
+            weight: 0
+            additional:
+              ui_styles_wrapper: {  }
+              ui_styles_wrapper_extra: ''
+              ui_styles_title: {  }
+              ui_styles_title_extra: ''
+              ui_styles: {  }
+              ui_styles_extra: ''
+        third_party_settings: {  }
+id: paragraph.slick_wrapper.default
+targetEntityType: paragraph
+bundle: slick_wrapper
+mode: default
+content:
+  field_slider_card_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_content: true
+  field_cta: true
+  field_description: true
