@@ -452,10 +452,13 @@
   .mt-6 {
     margin-top: var(--spacing-6);
   }
+<<<<<<< HEAD
   .mt-auto {
     margin-top: auto;
 >>>>>>> 3e20d2e997b90e73852a1d9c14498711a26b8e2f
   }
+=======
+>>>>>>> 792ad3cbe3a44268899cbe43162cbb426ae1778a
   .mb-2 {
     margin-bottom: var(--spacing-2);
   }
